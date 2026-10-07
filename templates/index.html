@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Ultra CRM-System</title>
-    <link rel=icon href="https://flask.palletsprojects.com/en/stable/_static/flask-icon.svg">
-</head>
-<body>
-    <a href="/slinkaway">Go to slinkaway</a>
+{% extends "base.html" %}
+{% block title %}Main{% endblock %}
+{% block body %}
+    <div class="header">
+        <nav>
+            <a href="/slinkaway">Go to slinkaway</a>
+        </nav>
+    </div>
     <p>yo what's up?</p>
-</body>
+{% endblock %}
 </html>
