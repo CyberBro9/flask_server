@@ -8,6 +8,21 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    {% block body %}{% endblock %}
+    <div class="header">
+        <a href="/">
+            <h1 class="insetPLEASE">Ultra CRM-System</h1>
+        </a>
+        <div class="header-buttons">
+            <div class="link">
+                 <a href="/slinkaway">Slinkaway</a>
+            </div>
+            <div class="link">
+                 <a href="/slinkaway">Useless Button</a>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        {% block body %}{% endblock %}
+    </div>
 </body>
 </html>

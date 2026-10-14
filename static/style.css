@@ -1,13 +1,40 @@
 body {
-    background-color: lightblue
+    background-color: lightblue;
+    padding: 10px;
+    inset: 2px;
+}
+.body {
+    display: grid-lanes;
+    place-items: center;
+}
+.header {
+    border-radius: 12px;
+    padding: 3px;
+    background-color: blue;
+    margin-bottom: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    display: flex;
+    place-items: center;
+    align-items: center;
+    justify-content: space-between
+}
+.link {
+    display: flex;
+    font-size: 2em
+}
+.header-buttons {
+    display: flex;
+    place-items: center;
+    align-items: center;
+    gap: 2em;
 }
 nav {
     width: 15em;
     fill: context-fill;
     display: flex;
-    list-style: none;
     margin: auto;
     padding: 20px;
     background-color: blue;
-    border-radius: 12px
+    border-radius: 12px;
 }
