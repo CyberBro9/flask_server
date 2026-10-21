@@ -4,7 +4,8 @@ body {
     inset: 2px;
 }
 .body {
-    display: grid-lanes;
+    display: grid;
+    gap: 0.5em;
     place-items: center;
 }
 .header {

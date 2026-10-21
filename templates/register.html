@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base.html" %}
+{% block title %}???{% endblock %}
+{% block body %}
+    <label for="name">Name (4 to 16 characters):</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      required
+      minlength="4"
+      maxlength="16"
+      size="10"
+    />
+    <label for="password">Password:</label>
+    <input
+      type="password"
+      id="password"
+      name="password"
+      required
+      size="10"
+    />
+{% endblock %}
+</html>
