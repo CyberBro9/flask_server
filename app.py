@@ -20,15 +20,12 @@ def does_any_function_name_work():
     return render_template("index.html")
 
 
-@app.route("/slinkaway")
+@app.route("/login")
 def sneaky():
-    return render_template("slinkaway.html")
+    return render_template("login.html")
 
 
-@app.route("/slinkaway/<int:repeats>")
-def sneaky_count(repeats: int):
-    string = ""
-    for i in range(repeats):
-        string += f"this text will now be displayed {escape(repeats)} times</br>"
+@app.route("/home")
+def open_home():
+    return render_template("home.html")
 
-    return f"<p>{string}</p>"

@@ -1,5 +1,5 @@
 body {
-    background-color: lightblue;
+    background-color: rgb(233, 236, 237);
     padding: 10px;
     inset: 2px;
 }
@@ -11,7 +11,7 @@ body {
 .header {
     border-radius: 12px;
     padding: 3px;
-    background-color: blue;
+    background-color: rgb(146, 190, 223);
     margin-bottom: 2em;
     padding-left: 2em;
     padding-right: 2em;
@@ -20,15 +20,27 @@ body {
     align-items: center;
     justify-content: space-between
 }
-.link {
+.link_button {
+    background-color: rgb(64, 136, 198);
+    border-radius: 12px;
     display: flex;
-    font-size: 2em
+    padding: 0.5em;
+}
+.link {
+    color: white;
+    font-size: 1em
 }
 .header-buttons {
     display: flex;
     place-items: center;
     align-items: center;
     gap: 2em;
+}
+.dashboard {
+    display: fill;
+    place-items: center;
+    align-items: center;
+    justify-content: space-between
 }
 nav {
     width: 15em;
