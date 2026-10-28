@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 {% extends "base.html" %}
-{% block title %}???{% endblock %}
+{% block title %}Login{% endblock %}
 {% block body %}
-    <label for="name">Name (4 to 16 characters):</label>
-    <input
-      type="text"
-      id="name"
-      name="name"
-      required
-      minlength="4"
-      maxlength="16"
-      size="10"
-    />
-    <label for="password">Password:</label>
-    <input
-      type="password"
-      id="password"
-      name="password"
-      required
-      size="10"
-    />
+    <form action="" method="post" class="login_form">
+        <label for="name">Name (4 to 16 characters):</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          minlength="4"
+          maxlength="16"
+          size="10"
+        />
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+          size="10"
+        />
+        <button class="link_button" type="submit">Login</button>
+    </form>
+    <label for="register_button">Don't have an account?</label>
+    <div class="link_button">
+        <a class="link" href="login/newuser" id="register_button">Register</a>
+    </div>
 {% endblock %}
 </html>
