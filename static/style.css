@@ -30,6 +30,7 @@ body {
     border-radius: 12px;
     display: flex;
     padding: 0.5em;
+    justify-content: center;
 }
 .link {
     color: white;
@@ -42,11 +43,14 @@ body {
     align-items: center;
     gap: 2em;
 }
+.button-list {
+    display: grid;
+    gap: 1em
+}
 .dashboard {
-    display: fill;
-    place-items: center;
+    display: block;
     align-items: center;
-    justify-content: space-between
+    justify-items: end;
 }
 nav {
     width: 15em;

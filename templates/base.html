@@ -24,6 +24,7 @@
     </div>
     <div class="body">
         {% block body %}{% endblock %}
+        <p>{{get_flashed_messages()[0]}}</p>
     </div>
 </body>
 </html>

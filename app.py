@@ -76,14 +76,18 @@ def register_request():
         if error:
             flash(error)
         else:
-            return redirect("/home")
+            error = login(request.form["name"], request.form["password"])
+            if error:
+                flash(error)
+            else:
+                return redirect("/home")
 
     return render_template("login.html")
 
 
 @app.route("/home")
 def open_home():
-    if session["user_id"]:
+    if session and "user_id" in session:
         return render_template("home.html")
 
     return redirect("/login")
@@ -91,9 +95,16 @@ def open_home():
 
 @app.context_processor
 def set_user_data():
-    data = db.get_db()
-    user = data.execute(
-        'SELECT * FROM user WHERE id = ?', (session["user_id"],)
-    ).fetchone()
+    username = "Not logged in"
+    id = None
 
-    return dict(username = user["username"], id = user["id"])
+    if session and "user_id" in session:
+        data = db.get_db()
+        user = data.execute(
+            'SELECT * FROM user WHERE id = ?', (session["user_id"],)
+        ).fetchone()
+
+        username = user["username"]
+        id = session["user_id"]
+
+    return dict(username = username, id = id)
